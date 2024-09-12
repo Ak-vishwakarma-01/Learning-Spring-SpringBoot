@@ -1,13 +1,32 @@
 package com.ankit.springbootapp._springbootappdemo;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+//@EnableAutoConfiguration // websever load, making dispatch sevelet, making servelate, initialize tomcat , side depndency embedding
+//@ComponentScan           // scanning all classes of this package
+//@AutoConfiguration  
+
+@SpringBootApplication  // instead of all above use this single one
 public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+//		SpringApplication springApplication = new SpringApplication(Application.class);
+		SpringApplication.run(Ankit.class,args);
+//		ConfigurableApplicationContext container = springApplication.run(); // It is used to get/make the object
+//		Student student = container.getBean(Student.class);
+//	    System.out.println(student);
+//		System.out.println("student name:  "+student.getStudentName());
+		
+		
 	}
-
+//	@Bean         // use to create object manually but push into container
+//	public Student createObj() {
+//		return new Student();
+//	}
 }

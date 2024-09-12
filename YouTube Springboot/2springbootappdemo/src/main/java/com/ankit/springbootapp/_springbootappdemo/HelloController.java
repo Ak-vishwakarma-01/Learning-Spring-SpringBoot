@@ -9,4 +9,9 @@ public class HelloController {
 	public String home() {
 		return "Hellow Spring Boot";
 	}
+	
+	@GetMapping
+	public String hi() {
+		return "Hii Ankit";
+	}
 }

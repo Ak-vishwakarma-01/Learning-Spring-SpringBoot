@@ -1,10 +1,11 @@
 package com.controller;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
-@EnableAutoConfiguration  // to five the sever
+@EnableAutoConfiguration  // to give the sever
 @ComponentScan   // without this it will 404 error on sever
 public class StarterApp {
 	public static void main(String[] args) {

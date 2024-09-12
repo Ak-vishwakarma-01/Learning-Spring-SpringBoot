@@ -1,0 +1,12 @@
+package com.controller;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+
+@EnableAutoConfiguration  // to five the sever
+public class StarterApp {
+	public static void main(String[] args) {
+		SpringApplication springApplication = new SpringApplication(StarterApp.class);
+		springApplication.run();
+	}
+}

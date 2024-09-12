@@ -1,0 +1,18 @@
+package com.ankit.springbootapp._springbootappdemo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication springApplication = new SpringApplication(Application.class);
+		ConfigurableApplicationContext contaner = springApplication.run();
+		Student student = contaner.getBean(Student.class);
+	    System.out.println(student);
+		System.out.println(student.getStudentName());
+	}
+
+}

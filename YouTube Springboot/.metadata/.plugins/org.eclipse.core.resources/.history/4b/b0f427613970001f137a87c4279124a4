@@ -1,0 +1,7 @@
+package com.controller;
+
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+public class MyDispatcherServlet extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+}

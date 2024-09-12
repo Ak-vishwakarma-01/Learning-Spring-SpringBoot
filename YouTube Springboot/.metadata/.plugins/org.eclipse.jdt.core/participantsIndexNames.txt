@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+C:\All codes\SpringBoot\YouTube Springboot\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2705353295.index
+\1SpringrestApi\src\main\resources

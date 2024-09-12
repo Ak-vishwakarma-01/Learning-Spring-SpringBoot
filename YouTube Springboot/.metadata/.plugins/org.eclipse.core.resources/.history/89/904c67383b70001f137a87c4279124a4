@@ -1,0 +1,7 @@
+package com.ankit.springbootapp._springbootappdemo;
+
+public class HelloController {
+	public String home() {
+		return "Hellow Spring Boot";
+	}
+}

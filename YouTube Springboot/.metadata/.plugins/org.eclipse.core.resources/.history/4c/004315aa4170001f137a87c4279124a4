@@ -1,0 +1,10 @@
+package com.controller;
+
+import org.springframework.boot.SpringApplication;
+
+public class StarterApp {
+	public static void main(String[] args) {
+		SpringApplication springApplication = new SpringApplication();
+		springApplication.run();
+	}
+}

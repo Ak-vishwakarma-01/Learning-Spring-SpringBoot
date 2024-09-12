@@ -1,0 +1,9 @@
+package com.ankit.springbootapp._springbootappdemo;
+
+public class Student {
+	String studentName;
+	public Student(String studentName) {
+		super();
+		this.studentName = studentName;
+	}
+}

@@ -1,0 +1,7 @@
+server:
+  port: 9595
+
+myapp:
+  name: aadiandjava
+  version: 1.2
+  description: this is for learning project

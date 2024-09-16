@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.9</version>
+		<version>3.3.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ankit.springbootapp</groupId>
-	<artifactId>2springbootappdemo</artifactId>
+	<groupId>com.5ankitjava</groupId>
+	<artifactId>5springboot2min</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>2springbootappdemo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>5springboot2min</name>
+	<description>5th project springboot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -40,20 +40,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-		</dependency>
-
-
 	</dependencies>
 
 	<build>

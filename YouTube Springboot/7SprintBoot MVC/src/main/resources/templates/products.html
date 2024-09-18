@@ -1,0 +1,25 @@
+<!-- src/main/resources/templates/products.html -->
+<!DOCTYPE html>
+<html xmlns:th="www.thyemeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+<h1>Product List</h1>
+<ul>
+    <table>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+
+        <tr th:each="product:${products}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.price}"></td>
+        </tr>
+    </table>
+</ul>
+</body>
+</html>

@@ -1,10 +1,8 @@
-package com._ankitjava._springboot2min;
+package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @org.springframework.stereotype.Service // this annotation wiil say that this class is sevice class
@@ -25,6 +23,14 @@ public class Service {
 
     public  String updateallteam(Ipltema newteam) throws SQLException, ClassNotFoundException {
         return dao.updateAll(newteam);
+    }
+
+    public  String dleteateam(String teamname) throws SQLException, ClassNotFoundException {
+        return dao.deleteam(teamname);
+    }
+
+    public Ipltema getiplteambyteamname(String teamname) throws SQLException, ClassNotFoundException {
+        return dao.getByTeamName(teamname);
     }
 
 }

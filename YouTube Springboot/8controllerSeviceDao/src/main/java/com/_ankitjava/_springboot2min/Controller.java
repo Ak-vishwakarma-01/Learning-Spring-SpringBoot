@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+@RestController //It is use to return the data in the form of json
 public class Controller {
     @Autowired
     Service service;
@@ -26,5 +26,10 @@ public class Controller {
     @PutMapping("/iplteams/{Captionname}/{teamName}")
     public String updateCaption(@PathVariable  String Captionname,@PathVariable String teamName) throws SQLException, ClassNotFoundException {
         return  service.updateteam(Captionname,teamName);
+    }
+
+    @PutMapping("/iplteams")
+    public String updateallteam(@RequestBody Ipltema iplnewteam) throws SQLException, ClassNotFoundException { // new we will send json data to put
+        return  service.updateallteam(iplnewteam);
     }
 }

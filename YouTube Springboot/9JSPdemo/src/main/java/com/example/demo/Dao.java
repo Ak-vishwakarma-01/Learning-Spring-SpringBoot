@@ -1,4 +1,4 @@
-package com._ankitjava._springboot2min;
+package com.example.demo;
 
 import com.mysql.cj.jdbc.Driver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,5 +58,27 @@ public class Dao {
         pst.executeUpdate();
 
         return "Update Successful";
+    }
+
+    public String deleteam( String teamName) throws SQLException, ClassNotFoundException {
+        Connection con = DBConnection.DBconnect();
+        PreparedStatement pst = con.prepareStatement("delete from ipl where name = ?");
+        pst.setString(1,teamName);
+        pst.executeUpdate();
+
+        return "the team has bean deleted";
+    }
+
+    public Ipltema getByTeamName(String teamName) throws SQLException, ClassNotFoundException {
+        Connection con = DBConnection.DBconnect();
+        PreparedStatement pst = con.prepareStatement("select * from ipl where name = ?");
+        pst.setString(1, teamName);
+        ResultSet rs = pst.executeQuery();
+        Ipltema iplteams = null;
+        while (rs.next()) {
+            iplteams = new Ipltema(rs.getString("name"), rs.getInt("trophies"), rs.getString("ownername"), rs.getString("captainname"));
+            rs.next();
+        }
+        return iplteams;
     }
 }

@@ -4,9 +4,7 @@ import com.example.demo.entity.Employee;
 import com.example.demo.sevice.EmployeeService;
 import com.example.demo.sevice.ResponseEmployee;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class EmployeeController {
@@ -25,7 +23,12 @@ public class EmployeeController {
     }
      */
     @PostMapping("/employee")
-    public ResponseEmployee inset(@RequestBody  Employee employee){
+    public ResponseEmployee insert(@RequestBody  Employee employee){  // we have to give input inside body of request;
         return employeeService.insertEmployee(employee);
+    }
+
+    @GetMapping("/employee/{id}")
+    public ResponseEmployee getEmployById(@PathVariable int id){  // here we have to input in the url;
+        return employeeService.getEmployeeById(id);
     }
 }

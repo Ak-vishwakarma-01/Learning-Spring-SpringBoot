@@ -6,6 +6,8 @@ import com.example.demo.sevice.ResponseEmployee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class EmployeeController {
 
@@ -31,4 +33,11 @@ public class EmployeeController {
     public ResponseEmployee getEmployById(@PathVariable int id){  // here we have to input in the url;
         return employeeService.getEmployeeById(id);
     }
+
+    @GetMapping("/sallary") //http://localhost:8080/sallary?min=1000&max=10000000
+    public List<Employee> getEmployeeBySallary(@RequestParam("min") double min, @RequestParam("max") double max) {
+        System.out.println("Received request for employees with salary between " + min + " and " + max);
+        return employeeService.getSallaryBetween(min, max);
+    }
+
 }

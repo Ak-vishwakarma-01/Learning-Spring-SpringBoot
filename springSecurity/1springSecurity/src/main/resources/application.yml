@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spirngsecurity
+  security:
+    user:
+      name: ankit
+      password: 1234
